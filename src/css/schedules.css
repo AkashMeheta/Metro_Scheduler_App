@@ -1,0 +1,15 @@
+.schedules {
+    display: flex;
+    border: 2px solid;
+    color: black;
+    font-size: 1vw;
+    font-weight: 500;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+.cardDiv {
+    display: flex;
+    margin: auto;
+}
