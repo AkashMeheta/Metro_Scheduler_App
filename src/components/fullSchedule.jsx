@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import FullListCard from './fullListCard';
+import ContextStore from '../store/contextStore';
 
-const FullSchedule = ({ index, list }) => {
+const FullSchedule = () => {
+
+    const store = useContext(ContextStore);
+    const list = store.listArr;
+    const index  = store.indexVal;
+
     let tempObj = list[index];
     return (
         <>

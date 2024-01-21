@@ -1,6 +1,11 @@
-import React, { useRef } from 'react'
+import React, { useContext, useRef } from 'react'
+import ContextStore from '../store/contextStore';
 
-const Search = ({ setInputs }) => {
+const Search = () => {
+
+    const store = useContext(ContextStore);
+    const setInputs = store.setInputs;
+
     let startRef = useRef();
     let finishRef = useRef();
     const hadnelSearch = (e) => {

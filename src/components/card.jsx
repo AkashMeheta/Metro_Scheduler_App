@@ -14,7 +14,7 @@ const Card = ({inputs, listItems, index, handelFullList}) => {
   return (
     <>
       <div className="schedules">
-          <p>{index}</p>
+          <p>{index+1}</p>
           <p>{start}</p>
           <p>{listItems[start]}</p>
           <p>{finish}</p>

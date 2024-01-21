@@ -1,16 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Card from './card';
 
 import "../css/schedules.css";
+import ContextStore from '../store/contextStore';
 
-const DisplayCard = ({ inputs, arr, handelFullList }) => {
+const DisplayCard = () => {
+
+  const store = useContext(ContextStore);
+  const arr = store.listArr;
+  const inputs = store.inputs;
+  const handelFullList = store.handelFullList;
+
   let counter = 1;
   const keyVal = () => {
     counter++;
     return counter;
   }
-
-
 
   return (
     <>
