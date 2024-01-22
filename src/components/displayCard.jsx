@@ -20,11 +20,11 @@ const DisplayCard = () => {
   return (
     <>
       <div className="container my-5">
-        <div className="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg cardDiv">
+        {/*<div className="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg cardDiv">*/}
           {arr.map((listItems, index) => (
             <Card key={keyVal()} listItems={listItems} inputs={inputs} index={index} handelFullList={handelFullList}></Card>
           ))}
-        </div>
+        {/*</div>*/}
       </div>
     </>
   )

@@ -51,8 +51,8 @@ const Search = () => {
                         
                     </div>
                     <div className="col-lg-7 p-3 p-lg-5 pt-lg-3">
-                        <h1 className="display-4 fw-bold lh-1 text-body-emphasis">Plan Your Journey</h1>
-                        <p className="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                        <h1 className="display-4 fw-bold lh-1 text-body-emphasis">Effortless Metro Schedule Search</h1>
+                        <p className="lead">Find your route, discover timings, and plan your journey seamlessly</p>
                     </div>
                 </div>
             </div>
