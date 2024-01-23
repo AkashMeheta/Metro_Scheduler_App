@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import Card from './card';
 
 import "../css/schedules.css";
@@ -9,8 +9,17 @@ const DisplayCard = () => {
   const store = useContext(ContextStore);
   const arr = store.listArr;
   const inputs = store.inputs;
+  const DOWNlistArr = store.DOWNlistArr;
+  const stations = store.stations;
   const handelFullList = store.handelFullList;
 
+  const start= inputs.start;
+  const finish = inputs.finish;
+
+
+
+  console.log(`From discard ${stations[start]}`)
+  console.log(`From discard ${stations[finish]}`)
   let counter = 1;
   const keyVal = () => {
     counter++;
@@ -20,11 +29,11 @@ const DisplayCard = () => {
   return (
     <>
       <div className="container my-5">
-        {/*<div className="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg cardDiv">*/}
-          {arr.map((listItems, index) => (
-            <Card key={keyVal()} listItems={listItems} inputs={inputs} index={index} handelFullList={handelFullList}></Card>
+          { stations[start]>stations[finish] ? arr.map((listItems, index) => (
+            <Card key={keyVal()} listItems={listItems} inputs={inputs} index={index} handelFullList={handelFullList} val={true}></Card>
+          )) : DOWNlistArr.map((listItems, index) => (
+            <Card key={keyVal()} cardID={keyVal()} listItems={listItems} inputs={inputs} index={index} handelFullList={handelFullList} val={false}></Card>
           ))}
-        {/*</div>*/}
       </div>
     </>
   )

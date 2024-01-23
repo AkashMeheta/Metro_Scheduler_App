@@ -34,3 +34,10 @@
    height: 60px;
    margin-top: 10px;
 }
+
+.input_section{
+    margin: 10px 0px;
+    border: 1px solid black;
+    font-weight: 600;
+    justify-content: center;
+}

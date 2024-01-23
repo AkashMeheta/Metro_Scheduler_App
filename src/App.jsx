@@ -1079,6 +1079,18 @@ function App() {
       SECTORV: "21:55"
     }
   ]
+
+  const stations = {
+    SECTORV: 1,
+    KARUNAMOYEY: 2,
+    CENTRALPARK: 3,
+    CITYCENTER: 4,
+    BENGALCHEMICAL: 5,
+    SALTLAKESTADIUM: 6,
+    PHOOLBAGAN: 7,
+    SEALDAH: 8
+  };
+  
   const [inputs, setInputs] = useState({});
   const [indexVal, setIndexVal] = useState(-1);
 
@@ -1088,7 +1100,7 @@ function App() {
   }
   return (
     <>
-      <ContextStore.Provider value={{ listArr, inputs, indexVal, handelFullList, setInputs }}>
+      <ContextStore.Provider value={{ listArr, inputs, indexVal, DOWNlistArr, stations, handelFullList, setInputs }}>
         <HeaderSection />
         <Hero />
         <Search />

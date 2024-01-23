@@ -1,5 +1,6 @@
 import React, { useContext, useRef } from 'react'
 import ContextStore from '../store/contextStore';
+import "../css/schedules.css"
 
 const Search = () => {
 
@@ -20,11 +21,11 @@ const Search = () => {
     }
     return (
         <>
-            <div className="container my-5">
+            <div className="container my-5" id='search'>
                 <div className="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
                     <div className="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
                         <form className={`row`} onSubmit={hadnelSearch}>
-                            <select ref={startRef} id="start" className="form-select" aria-label="Default select example" defaultValue="Start Location">
+                            <select ref={startRef} id="start" className="form-select input_section" aria-label="Default select example" defaultValue="Start Location">
                                 <option value="Start Location">Start Location</option>
                                 <option value="SEALDAH">SEALDAH</option>
                                 <option value="PHOOLBAGAN">PHOOL BAGAN</option>
@@ -35,7 +36,7 @@ const Search = () => {
                                 <option value="KARUNAMOYEY">KARUNAMOYEY</option>
                                 <option value="SECTORV">SECTORV</option>
                             </select>
-                            <select ref={finishRef} id="finish" className="form-select" aria-label="Default select example" defaultValue="Destination Location">
+                            <select ref={finishRef} id="finish" className="form-select input_section" aria-label="Default select example" defaultValue="Destination Location">
                                 <option value="Destination Location">Destination Location</option>
                                 <option value="SEALDAH">SEALDAH</option>
                                 <option value="PHOOLBAGAN">PHOOL BAGAN</option>
